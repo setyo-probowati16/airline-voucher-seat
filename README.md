@@ -31,7 +31,13 @@ A full-stack web application for generating random seat vouchers for airline cre
 ```text
 project/
 ├── backend/
+│   ├── .env.example
+│   ├── Dockerfile
+│   └── ...
 ├── frontend/
+│   ├── .env.example
+│   ├── Dockerfile
+│   └── ...
 ├── scripts/
 │   ├── start.sh
 │   └── stop.sh
@@ -81,6 +87,15 @@ cd ../frontend
 npm install
 ```
 
+Create environment files from the provided examples.
+
+```bash
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
+```
+
+Update the environment variables if necessary.
+
 ---
 
 # Running the Application
@@ -89,14 +104,7 @@ npm install
 
 ### Backend
 
-Create `.env` inside the `backend` folder.
-
-```env
-PORT=3000
-DB_NAME=vouchers.db
-```
-
-Run the backend.
+Run the backend server.
 
 ```bash
 cd backend
@@ -113,13 +121,7 @@ http://localhost:3000
 
 ### Frontend
 
-Create `.env` inside the `frontend` folder.
-
-```env
-VITE_API_URL=http://localhost:3000/api
-```
-
-Run the frontend.
+Open another terminal and run the frontend.
 
 ```bash
 cd frontend
@@ -153,6 +155,8 @@ Or use Docker Compose directly.
 ```bash
 docker compose up --build
 ```
+
+To stop the application.
 
 ```bash
 docker compose down
@@ -248,14 +252,14 @@ Response
 
 # Development
 
-Run backend
+Run the backend.
 
 ```bash
 cd backend
 npm run dev
 ```
 
-Run frontend
+Run the frontend.
 
 ```bash
 cd frontend
@@ -266,21 +270,21 @@ npm run dev
 
 # Build
 
-Build backend
+Build the backend.
 
 ```bash
 cd backend
 npm run build
 ```
 
-Build frontend
+Build the frontend.
 
 ```bash
 cd frontend
 npm run build
 ```
 
-Or build both projects from the root directory.
+Or build both applications from the project root.
 
 ```bash
 npm run build
