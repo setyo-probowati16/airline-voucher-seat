@@ -61,7 +61,7 @@ Optional (recommended)
 Clone the repository.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/setyo-probowati16/airline-voucher-seat.git
 cd airline-voucher-seat
 ```
 
