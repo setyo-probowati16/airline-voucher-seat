@@ -183,7 +183,7 @@ http://localhost:3000
 ## Check Voucher
 
 ```
-POST /api/vouchers/check
+POST /api/check
 ```
 
 Request
@@ -208,7 +208,7 @@ Response
 ## Generate Voucher
 
 ```
-POST /api/vouchers/generate
+POST /api/generate
 ```
 
 Request
